@@ -28,8 +28,8 @@ public class MainActivity extends Activity {
     Tapping each item in listView should open that article URL in a browser
     */
     interface api{
-        @GET("/svc/search/v2/articlesearch.json?q={query}&page=2&sort=oldest&api-key=f8e3e0aab0c3cc0ff9c9daac65bb4863:0:71846732")
-        public void getArticles(@Query("query") String q, Callback<NytData> res);
+        @GET("/svc/search/v2/articlesearch.json?page=2&sort=oldest&api-key=f8e3e0aab0c3cc0ff9c9daac65bb4863:0:71846732")
+        public void getArticles(@Query("q") String q, Callback<NytData> res);
     }
 
     @Override
